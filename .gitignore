@@ -1,0 +1,10 @@
+/_build/
+/cover/
+/deps/
+/doc/
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
+/tmp/
+erl_crash.dump
+*.ez
+git_mailmap-*.tar
