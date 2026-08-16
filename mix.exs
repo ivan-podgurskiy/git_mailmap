@@ -11,7 +11,8 @@ defmodule GitMailmap.MixProject do
       elixir: "~> 1.14",
       deps: deps(),
       name: "GitMailmap",
-      description: "Parse, resolve, and serialize Git .mailmap files in Elixir.",
+      description:
+        "Parse, resolve, and serialize Git .mailmap files in Elixir to canonicalize author and committer identities.",
       package: package(),
       source_url: @source_url,
       docs: docs(),
