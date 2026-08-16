@@ -37,8 +37,7 @@ defmodule GitMailmap.MixProject do
 
   defp package do
     [
-      files:
-        ~w(lib .formatter.exs mix.exs README.md LICENSE CHANGELOG.md ROADMAP.md THIRD_PARTY_NOTICES.md),
+      files: ~w(lib .formatter.exs mix.exs README.md LICENSE CHANGELOG.md ROADMAP.md),
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url},
       maintainers: ["Ivan Podgurskiy"]
@@ -50,7 +49,7 @@ defmodule GitMailmap.MixProject do
       main: "GitMailmap",
       source_ref: "v#{@version}",
       source_url: @source_url,
-      extras: ["README.md", "CHANGELOG.md", "ROADMAP.md", "THIRD_PARTY_NOTICES.md", "LICENSE"]
+      extras: ["README.md", "CHANGELOG.md", "ROADMAP.md", "LICENSE"]
     ]
   end
 end
