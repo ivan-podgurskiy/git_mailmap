@@ -90,5 +90,4 @@ performance work.
 
 ## License
 
-MIT. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for compatibility
-research provenance.
+MIT.
