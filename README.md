@@ -31,6 +31,32 @@ GitMailmap.serialize(entries)
 #=> "Joe R. Developer <joe@example.com>\n..."
 ```
 
+## Entry format
+
+`GitMailmap.parse/1` returns a list of entry maps:
+
+```elixir
+%{
+  new_name: String.t() | nil,
+  new_email: String.t() | nil,
+  old_email: String.t(),
+  old_name: String.t() | nil
+}
+```
+
+The parser accepts the Git-compatible forms below:
+
+```text
+Proper Name <commit@email>
+<proper@email> <commit@email>
+Proper Name <proper@email> <commit@email>
+Proper Name <proper@email> Commit Name <commit@email>
+<proper@email> Commit Name <commit@email>
+```
+
+Only a `#` in the first column starts a comment. Matching of names and emails
+uses ASCII case-insensitive comparison, as Git does.
+
 ## API
 
 ### `GitMailmap.parse/1`
@@ -57,7 +83,12 @@ raise `ArgumentError`.
 The package handles strings only. Reading `.mailmap` files, Git configuration,
 Git blobs, and command-line integration are intentionally left to consumers.
 
+## Roadmap
+
+See [ROADMAP.md](./ROADMAP.md) for planned compatibility, testing, and
+performance work.
+
 ## License
 
-MIT
-Parse, resolve, and serialize Git .mailmap files in Elixir.
+MIT. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for compatibility
+research provenance.
