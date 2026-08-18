@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2026-08-18
+
+- Improve package README discoverability.
+- Exclude research notices from the published Hex package and generated docs.
+
 ## 1.0.0 - 2026-08-16
 
 - Add `.mailmap` parsing, identity resolution, and serialization.
